@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:last_exam/ui/splash/splash_page.dart';
 
 class RouteName {
   //splash pages
@@ -15,7 +16,7 @@ class AppRoutes {
     switch (settings.name) {
       //splash pages
       case RouteName.splash:
-        return MaterialPageRoute(builder: (_) => const Scaffold());
+        return MaterialPageRoute(builder: (_) => const SplashPage());
 
       default:
         return MaterialPageRoute(builder: (_) => const Scaffold());
