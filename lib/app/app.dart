@@ -1,6 +1,7 @@
 import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:last_exam/ui/tab_box/tabs/home/home_page.dart';
 import 'package:last_exam/utils/router/app_router.dart';
 import 'package:last_exam/utils/theme/theme.dart';
 
@@ -31,8 +32,9 @@ class MyApp extends StatelessWidget {
           theme: light,
           darkTheme: dark,
           debugShowCheckedModeBanner: false,
-          onGenerateRoute: AppRoutes.generateRote,
-          initialRoute: RouteName.splash,
+          // onGenerateRoute: AppRoutes.generateRote,
+          // initialRoute: RouteName.splash,
+          home: const HomePage(),
         ),
       ),
     );

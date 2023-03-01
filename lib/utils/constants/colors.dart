@@ -25,5 +25,9 @@ class AppColors {
   static const C_4162FF=Color(0xFF4162FF);
   // ignore: constant_identifier_names
   static const C_DADFE7=Color(0xFFDADFE7);
+  // ignore: constant_identifier_names
+  static const C_C4C4C4=Color(0xFFC4C4C4);
+  // ignore: constant_identifier_names
+  static const C_0E1446=Color(0xFF0E1446);
 
 }
