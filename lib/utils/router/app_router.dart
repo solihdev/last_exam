@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:last_exam/ui/splash/splash_page.dart';
+import 'package:last_exam/ui/tab_box/tab_box.dart';
 
 class RouteName {
   //splash pages
@@ -19,7 +20,7 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const SplashPage());
 
       default:
-        return MaterialPageRoute(builder: (_) => const Scaffold());
+        return MaterialPageRoute(builder: (_) => const TabBox());
     }
   }
 }

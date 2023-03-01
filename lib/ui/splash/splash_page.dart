@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:last_exam/utils/constants/colors.dart';
 import 'package:last_exam/utils/constants/image.dart';
 import 'dart:async';
-
 import 'package:last_exam/utils/router/app_router.dart';
 
 class SplashPage extends StatefulWidget {
@@ -30,7 +30,11 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: AppColors.C_2E4EE7,
       body: Center(
-        child: Image.asset(AppImages.splash,width: 120,height: 120,),
+        child: Image.asset(
+          AppImages.splash,
+          width: 120.w,
+          height: 120.h,
+        ),
       ),
     );
   }
