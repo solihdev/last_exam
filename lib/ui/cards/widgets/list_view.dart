@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:last_exam/data/models/cart_model/cart_model.dart';
+import 'package:last_exam/data/models/cart_model/color_model.dart';
 
 import '../../../../state_manager/provider/edit_card_provider.dart';
 
