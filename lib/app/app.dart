@@ -32,9 +32,9 @@ class MyApp extends StatelessWidget {
           theme: light,
           darkTheme: dark,
           debugShowCheckedModeBanner: false,
-          // onGenerateRoute: AppRoutes.generateRote,
-          // initialRoute: RouteName.splash,
-          home: const HomePage(),
+          onGenerateRoute: AppRoutes.generateRote,
+          initialRoute: RouteName.splash,
+          // home: const HomePage(),
         ),
       ),
     );

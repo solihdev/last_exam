@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:last_exam/ui/tab_box/tabs/home/home_page.dart';
 import 'package:last_exam/ui/tab_box/widgets/float_button.dart';
 import 'package:last_exam/utils/constants/colors.dart';
 import 'package:last_exam/utils/constants/image.dart';
@@ -17,8 +17,8 @@ class _TabBoxState extends State<TabBox> {
 
   @override
   Widget build(BuildContext context) {
-    List pages = [
-      Scaffold(),
+    List pages = const [
+      HomePage(),
       Scaffold(),
       Scaffold(),
     ];
