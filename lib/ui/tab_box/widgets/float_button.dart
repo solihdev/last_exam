@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:last_exam/ui/cards/add_card/add_card_page.dart';
 import 'package:last_exam/utils/constants/colors.dart';
 
 class FloatButton extends StatelessWidget {
@@ -15,10 +16,10 @@ class FloatButton extends StatelessWidget {
           width: 90.w,
           height: 45.5.h,
           decoration: BoxDecoration(
-              color: AppColors.white,
+              color: Colors.transparent,
               borderRadius: const BorderRadius.only(
-                  bottomLeft: Radius.elliptical(76, 80),
-                  bottomRight: Radius.elliptical(76, 80))
+                      bottomLeft: Radius.elliptical(76, 80),
+                      bottomRight: Radius.elliptical(76, 80))
                   .r),
         ),
       ),
@@ -26,7 +27,10 @@ class FloatButton extends StatelessWidget {
         bottom: 40.h,
         left: 165.w,
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const AddCardPage()));
+          },
           child: Container(
               height: 72.h,
               width: 72.w,

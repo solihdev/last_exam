@@ -8,7 +8,6 @@ class EditCardProvider extends ChangeNotifier{
   String owner = "";
   String expireDate = "";
   String iconImage = "UzCard";
-  String userId = "";
   String cardName="";
   bool isLoading=false;
 
@@ -33,7 +32,6 @@ class EditCardProvider extends ChangeNotifier{
     String? owner1,
     String? expireDate1,
     String? iconImage1,
-    String? userId1,
     String? cardName1,
     bool? isLoading1
 }){

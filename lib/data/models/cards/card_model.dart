@@ -7,7 +7,6 @@ class CardModel {
     required this.owner,
     required this.expireDate,
     required this.iconImage,
-    required this.userId,
     required this.cardName
   });
 
@@ -19,7 +18,6 @@ class CardModel {
   String owner;
   String expireDate;
   String iconImage;
-  String userId;
 
   factory CardModel.fromJson(Map<String, dynamic> json) => CardModel(
     cardId: json["cardId"],
@@ -30,7 +28,6 @@ class CardModel {
     owner: json["owner"],
     expireDate: json["expireDate"],
     iconImage: json["iconImage"],
-    userId: json["userId"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -42,6 +39,5 @@ class CardModel {
     "owner": owner,
     "expireDate": expireDate,
     "iconImage": iconImage,
-    "userId": userId,
   };
 }

@@ -45,8 +45,8 @@ class CardRepository {
 
 
 
-  Stream<List<CardModel>> getCard({required String userId}) async* {
-    if (userId.isEmpty) {
+  Stream<List<CardModel>> getCard() async* {
+    if (false) {
       yield* _firestore.collection("cards").snapshots().map(
             (querySnapshot) => querySnapshot.docs
             .map((doc) => CardModel.fromJson(doc.data()))
@@ -55,7 +55,6 @@ class CardRepository {
     } else {
       yield* _firestore
           .collection("cards")
-          .where("userId", isEqualTo: userId)
           .snapshots()
           .map(
             (querySnapshot) => querySnapshot.docs

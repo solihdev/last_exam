@@ -18,7 +18,7 @@ packages:
     source: hosted
     version: "3.2.0"
   animated_snack_bar:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: animated_snack_bar
       sha256: "12459c60530f6652e93adfafa24b0ff8d8dc44ad7be01103cb4370f3776435d5"
@@ -82,7 +82,7 @@ packages:
     source: hosted
     version: "1.1.1"
   cloud_firestore:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: cloud_firestore
       sha256: "65f148d9f5b4f389320abb45847120cf5e46094c1a8cbc64934ffc1e29688596"
@@ -146,7 +146,7 @@ packages:
     source: hosted
     version: "0.7.8"
   device_info_plus:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: device_info_plus
       sha256: "1d6e5a61674ba3a68fb048a7c7b4ff4bebfed8d7379dbe8f2b718231be9a7c95"
@@ -210,7 +210,7 @@ packages:
     source: hosted
     version: "6.1.4"
   firebase_auth:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: firebase_auth
       sha256: "9907d80446466e638dad31c195150b305dffd145dc57610fcd12c72289432143"
@@ -257,6 +257,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.2.1"
+  firebase_messaging:
+    dependency: "direct main"
+    description:
+      name: firebase_messaging
+      sha256: "95f7565b8e992d2188cdd8dc5612330f7c309485fe425d3f9844f18e90741e3e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.2.5"
+  firebase_messaging_platform_interface:
+    dependency: transitive
+    description:
+      name: firebase_messaging_platform_interface
+      sha256: c5e79e15d1018cafffea1a6e45249db0d6bc42dbe35178634c77488179880e79
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.2.14"
+  firebase_messaging_web:
+    dependency: transitive
+    description:
+      name: firebase_messaging_web
+      sha256: cd0cfcab7a63282049dec95a9955e7a487b5e580162310d12a82a10c0c32c546
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.2.15"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -279,7 +303,7 @@ packages:
     source: hosted
     version: "2.0.1"
   flutter_local_notifications:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: flutter_local_notifications
       sha256: f222919a34545931e47b06000836b5101baeffb0e6eb5a4691d2d42851740dd9
@@ -345,7 +369,7 @@ packages:
     source: hosted
     version: "7.2.0"
   google_fonts:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: google_fonts
       sha256: "8f099045e2f2a30e4d4d0a35f40c6bc941a8f2ca0e10ad9d214ee9edd3f37483"
@@ -393,7 +417,7 @@ packages:
     source: hosted
     version: "2.0.1"
   lottie:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: lottie
       sha256: "893da7a0022ec2fcaa616f34529a081f617e86cc501105b856e5a3184c58c7c2"
@@ -401,7 +425,7 @@ packages:
     source: hosted
     version: "1.4.3"
   mask_text_input_formatter:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: mask_text_input_formatter
       sha256: "19bb7809c3c2559277e95521b3ee421e1409eb2cc85efd2feb191696c92490f4"
@@ -465,7 +489,7 @@ packages:
     source: hosted
     version: "1.0.1"
   path_provider:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: path_provider
       sha256: "04890b994ee89bfa80bf3080bfec40d5a92c5c7a785ebb02c13084a099d2b6f9"
@@ -617,7 +641,7 @@ packages:
     source: hosted
     version: "2.1.4"
   shimmer:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: shimmer
       sha256: "1f1009b5845a1f88f1c5630212279540486f97409e9fc3f63883e71070d107bf"
@@ -774,7 +798,7 @@ packages:
     source: hosted
     version: "6.2.2"
   zoom_tap_animation:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: zoom_tap_animation
       sha256: d9f7a73cab65aa1546ba6886b5e21d3c8ccccb34e4e5f770301c306d4868bee0

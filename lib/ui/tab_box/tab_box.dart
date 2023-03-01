@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:last_exam/ui/cards/cards/cards_page.dart';
 import 'package:last_exam/ui/tab_box/tabs/home/home_page.dart';
 import 'package:last_exam/ui/tab_box/widgets/float_button.dart';
 import 'package:last_exam/utils/constants/colors.dart';
@@ -20,7 +21,7 @@ class _TabBoxState extends State<TabBox> {
     List pages = const [
       HomePage(),
       Scaffold(),
-      Scaffold(),
+      CardsPage(),
     ];
     return Scaffold(
       body: pages[currentPage],
