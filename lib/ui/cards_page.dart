@@ -26,7 +26,7 @@ class AllCardsPage extends StatelessWidget {
           } else if (state is LoadCardsInSuccess) {
             return ListView(
               children: List.generate(
-                state.cardModel.length,
+                state.cardModel.length as int,
                 (index) => ListTile(
                   title: Text(state.cardModel[index].cardName),
                 ),

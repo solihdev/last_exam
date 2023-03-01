@@ -10,7 +10,7 @@ class CardRepository {
   Future<void> addCard({required CardModel cardModel}) async {
     try {
       DocumentReference newCard =
-      await _firestore.collection("cards").add(cardModel.toJson());
+          await _firestore.collection("cards").add(cardModel.toJson());
       await _firestore.collection("cards").doc(newCard.id).update({
         "cardId": newCard.id,
       });
@@ -42,25 +42,11 @@ class CardRepository {
     }
   }
 
-
-
-
   Stream<List<CardModel>> getCard() async* {
-    if (false) {
-      yield* _firestore.collection("cards").snapshots().map(
-            (querySnapshot) => querySnapshot.docs
-            .map((doc) => CardModel.fromJson(doc.data()))
-            .toList(),
-      );
-    } else {
-      yield* _firestore
-          .collection("cards")
-          .snapshots()
-          .map(
-            (querySnapshot) => querySnapshot.docs
-            .map((doc) => CardModel.fromJson(doc.data()))
-            .toList(),
-      );
-    }
+    yield* _firestore.collection("cards").snapshots().map(
+          (querySnapshot) => querySnapshot.docs
+              .map((doc) => CardModel.fromJson(doc.data()))
+              .toList(),
+        );
   }
 }
