@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:last_exam/data/models/cards/card_model.dart';
 import 'package:last_exam/state_manager/provider/card_provider.dart';
 import 'package:last_exam/state_manager/provider/edit_card_provider.dart';
-import 'package:last_exam/ui/cards/widgets/button.dart';
-import 'package:last_exam/ui/cards/widgets/list_view.dart';
+import 'package:last_exam/ui/cards_provider/widgets/button.dart';
 import 'package:last_exam/utils/assistants/my_toast.dart';
 import 'package:last_exam/utils/router/app_router.dart';
 
 import '../widgets/card_widget.dart';
+import '../widgets/list_view.dart';
 import '../widgets/text_field.dart';
 
 class UpdateCardPage extends StatelessWidget {
@@ -30,11 +30,13 @@ class UpdateCardPage extends StatelessWidget {
             CustomTextField(
               text: "Karta nomi",
               type: TextInputType.text,
+              textInputAction: TextInputAction.next,
               format: "",
             ),
             const SizedBox(height: 16),
             CustomTextField(
               text: "Karta egasini to'liq ismi va sharfi",
+              textInputAction: TextInputAction.next,
               type: TextInputType.text,
               format: "",
             ),

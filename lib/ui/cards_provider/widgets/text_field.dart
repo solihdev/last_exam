@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:last_exam/data/models/cards/card_model.dart';
 import 'package:last_exam/state_manager/provider/edit_card_provider.dart';
 import 'package:last_exam/utils/constants/constants.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
 class CustomTextField extends StatefulWidget {
   CustomTextField(
-      {Key? key, required this.text, required this.type, required this.format})
+      {Key? key,
+      required this.text,
+      required this.type,
+      required this.format,
+      required this.textInputAction})
       : super(key: key);
 
   String text;
   TextInputType type;
   String format;
+  TextInputAction textInputAction;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -66,6 +72,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               padding: const EdgeInsets.only(left: 20),
               child: TextField(
                 keyboardType: widget.type,
+                textInputAction: widget.textInputAction,
                 inputFormatters: widget.format.isNotEmpty
                     ? widget.format == MyConstants.cardFormat
                         ? [cardMaskInputFormatter]
@@ -73,9 +80,10 @@ class _CustomTextFieldState extends State<CustomTextField> {
                     : [],
                 onChanged: (value) {
                   if (widget.text == "Karta raqami") {
-                    context
-                        .read<EditCardProvider>()
-                        .changeFields(cardNumber1: value);
+                    context.read<EditCardProvider>().changeFields(
+                        cardNumber1: value.length == 16
+                            ? value.replaceRange(5, 14, '**** ****')
+                            : value);
                   } else if (widget.text == "Amal qilish muddati") {
                     context
                         .read<EditCardProvider>()

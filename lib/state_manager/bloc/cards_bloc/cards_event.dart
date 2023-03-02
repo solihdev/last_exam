@@ -12,7 +12,11 @@ class UpdateCardEvent extends SingleCardsEvent {
   });
 }
 
-class AddCardEvent extends SingleCardsEvent {}
+class AddCardEvent extends SingleCardsEvent {
+  final CardModel cardModel;
+
+  AddCardEvent({required this.cardModel});
+}
 
 class DeleteCardEvent extends SingleCardsEvent {
   final String id;

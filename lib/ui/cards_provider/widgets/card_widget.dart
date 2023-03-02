@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:last_exam/data/models/cards/card_model.dart';
 import 'package:last_exam/state_manager/provider/card_provider.dart';
 import 'package:last_exam/state_manager/provider/edit_card_provider.dart';
+import 'package:last_exam/ui/cards_provider/update_card/update_card_page.dart';
 import 'package:last_exam/utils/router/app_router.dart';
 import 'package:provider/provider.dart';
 
@@ -24,7 +26,7 @@ class CardWidget extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Container(
             width: double.infinity,
-            height: 230,
+            height: 280.h,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 gradient: LinearGradient(
@@ -105,7 +107,7 @@ class CardWidget extends StatelessWidget {
                         style:
                             const TextStyle(fontSize: 20, color: Colors.white),
                       ),
-                      const SizedBox(width: 32),
+                      // const SizedBox(width: 20),
                       Visibility(
                           visible: isVisibility,
                           child: IconButton(
@@ -120,17 +122,16 @@ class CardWidget extends StatelessWidget {
                                     iconImage1: cardModel!.iconImage,
                                     moneyAmount1: cardModel!.moneyAmount,
                                   );
-                              // Navigator.pushNamed(
-                              //   context,
-                              //   RouteName.updateCard,
-                              //   arguments: cardModel,
-                              // );
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context)=>UpdateCardPage(cardModel: cardModel!),),                              );
                             },
                             icon: const Icon(
                               Icons.edit,
                               color: Colors.white,
                             ),
                           )),
+                      const Expanded(child: SizedBox()),
                       Visibility(
                           visible: isVisibility,
                           child: IconButton(
@@ -164,7 +165,7 @@ class CardWidget extends StatelessWidget {
                               icon: const Icon(
                                 Icons.delete,
                                 color: Colors.white,
-                              )))
+                              ))),
                     ],
                   ),
                 ],

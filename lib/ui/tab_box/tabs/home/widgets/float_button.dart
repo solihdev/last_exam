@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:last_exam/ui/cards/add_card/add_card_page.dart';
+import 'package:last_exam/ui/cards_provider/add_card_page.dart';
 import 'package:last_exam/utils/constants/colors.dart';
 
 class FloatButton extends StatelessWidget {

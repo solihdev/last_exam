@@ -19,14 +19,14 @@ class CardModel {
   String iconImage;
 
   factory CardModel.fromJson(Map<String, dynamic> json) => CardModel(
-        cardId: json["cardId"],
-        cardName: json["cardName"],
-        gradient: List<String>.from(json["gradient"].map((x) => x)),
-        cardNumber: json["cardNumber"],
-        moneyAmount: json["moneyAmount"],
-        owner: json["owner"],
-        expireDate: json["expireDate"],
-        iconImage: json["iconImage"],
+        cardId: json["cardId"]??"",
+        cardName: json["cardName"]??"",
+        gradient: List<String>.from(json["gradient"].map((x) => x)??{}),
+        cardNumber: json["cardNumber"]??"",
+        moneyAmount: json["moneyAmount"]??"",
+        owner: json["owner"]??"",
+        expireDate: json["expireDate"]??"",
+        iconImage: json["iconImage"]??"",
       );
 
   Map<String, dynamic> toJson() => {

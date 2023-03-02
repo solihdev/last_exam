@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:last_exam/ui/cards/add_card/add_card_page.dart';
-import 'package:last_exam/ui/cards/cards/cards_page.dart';
+import 'package:last_exam/ui/cards_provider/add_card_page.dart';
+import 'package:last_exam/ui/cards_provider/cards_page.dart';
 import 'package:last_exam/ui/splash/splash_page.dart';
 import 'package:last_exam/ui/tab_box/tab_box.dart';
 

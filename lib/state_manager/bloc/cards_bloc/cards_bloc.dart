@@ -30,8 +30,7 @@ class SingleCardsBloc extends Bloc<SingleCardsEvent, SingleCardsState> {
 
   _addCardScreen(AddCardEvent event, Emitter<SingleCardsState> emit) {
     emit(state.copyWith(status: Status.loading));
-    CardModel cardModel = state.cardModel;
-    var newCard = getIt<CardRepository>().addCard(cardModel: cardModel);
+    getIt<CardRepository>().addCard(cardModel: event.cardModel);
     emit(state.copyWith(status: Status.cardAdded));
   }
 
@@ -45,7 +44,7 @@ class SingleCardsBloc extends Bloc<SingleCardsEvent, SingleCardsState> {
   }
 
   _deleteCardScreen(DeleteCardEvent event, Emitter<SingleCardsState> emit) {
-    var deletedId = getIt<CardRepository>().deleteCard(docId: event.id);
+    getIt<CardRepository>().deleteCard(docId: event.id);
     emit(state.copyWith(status: Status.cardDeleted));
   }
 }

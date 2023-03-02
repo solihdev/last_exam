@@ -6,7 +6,7 @@ import 'package:last_exam/state_manager/bloc/cards_bloc/cards_bloc.dart';
 import 'package:last_exam/state_manager/cubit/cards_cubit.dart';
 import 'package:last_exam/state_manager/provider/card_provider.dart';
 import 'package:last_exam/state_manager/provider/edit_card_provider.dart';
-import 'package:last_exam/ui/cards_page.dart';
+import 'package:last_exam/utils/router/app_router.dart';
 import 'package:last_exam/utils/theme/theme.dart';
 import 'package:provider/provider.dart';
 
@@ -51,9 +51,9 @@ class MyApp extends StatelessWidget {
           theme: light,
           darkTheme: dark,
           debugShowCheckedModeBanner: false,
-          // onGenerateRoute: AppRoutes.generateRote,
-          // initialRoute: RouteName.splash,
-          home: AllCardsPage(),
+          onGenerateRoute: AppRoutes.generateRote,
+          initialRoute: RouteName.splash,
+          // home: AllCardsPage(isVisibility: true),
           // home: const CardsPage(),
         ),
       ),

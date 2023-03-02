@@ -5,7 +5,9 @@ import 'package:last_exam/state_manager/cubit/cards_state.dart';
 import 'package:last_exam/utils/assistants/get_it/get_it.dart';
 
 class CardsCubit extends Cubit<CardsState> {
-  CardsCubit() : super(InitialState());
+  CardsCubit() : super(InitialState()) {
+    fetchAllCards();
+  }
 
   fetchAllCards() {
     emit(LoadCardsInProgress());

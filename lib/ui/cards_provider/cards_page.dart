@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:last_exam/state_manager/provider/card_provider.dart';
-import 'package:last_exam/ui/cards/widgets/card_widget.dart';
+import 'package:last_exam/ui/cards_provider/add_card_page.dart';
+import 'package:last_exam/ui/cards_provider/widgets/card_widget.dart';
 import 'package:provider/provider.dart';
 
 class CardsPage extends StatelessWidget {
@@ -10,6 +11,11 @@ class CardsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const AddCardPage()));
+          }, icon: const Icon(Icons.add)),
+        ],
         title: const Text("Cards Task"),
       ),
       body: Consumer<CardProvider>(

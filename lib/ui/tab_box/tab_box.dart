@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:last_exam/ui/cards/cards/cards_page.dart';
 import 'package:last_exam/ui/tab_box/tabs/home/home_page.dart';
-import 'package:last_exam/ui/tab_box/widgets/float_button.dart';
+import 'package:last_exam/ui/tab_box/tabs/home/widgets/float_button.dart';
 import 'package:last_exam/utils/constants/colors.dart';
 import 'package:last_exam/utils/constants/image.dart';
+
+import '../cards_provider/add_card_page.dart';
 
 class TabBox extends StatefulWidget {
   const TabBox({Key? key}) : super(key: key);
@@ -18,10 +19,10 @@ class _TabBoxState extends State<TabBox> {
 
   @override
   Widget build(BuildContext context) {
-    List pages = const [
-      HomePage(),
-      Scaffold(),
-      CardsPage(),
+    List pages =  [
+      HomePage(isVisibility: false),
+      const Scaffold(),
+      const AddCardPage(),
     ];
     return Scaffold(
       body: pages[currentPage],
